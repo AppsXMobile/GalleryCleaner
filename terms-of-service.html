@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terms of Service for Gallery Cleaner - Duplicate photo finder app">
+    <meta name="theme-color" content="#6366F1">
+    <title>Terms of Service - Gallery Cleaner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #6366F1;
+            --primary-dark: #4F46E5;
+            --secondary: #8B5CF6;
+            --success: #10B981;
+            --bg-light: #F8FAFC;
+            --bg-white: #FFFFFF;
+            --text-primary: #1E293B;
+            --text-secondary: #64748B;
+            --text-tertiary: #94A3B8;
+            --border: #E2E8F0;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--bg-white);
+            border-radius: 20px;
+            box-shadow: var(--shadow-lg);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .language-switcher {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            color: white;
+            padding: 10px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9em;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .lang-btn.active {
+            background: white;
+            color: var(--primary);
+            border-color: white;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        .lang-content {
+            display: none;
+        }
+        
+        .lang-content.active {
+            display: block;
+        }
+        
+        .app-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            color: var(--primary);
+            font-weight: 700;
+        }
+        
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: 800;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header .subtitle {
+            font-size: 1.2em;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+        
+        .content {
+            padding: 40px 30px;
+        }
+        
+        .last-updated {
+            background: var(--bg-light);
+            padding: 15px 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border-left: 4px solid var(--primary);
+            font-size: 0.95em;
+            color: var(--text-secondary);
+        }
+        
+        h2 {
+            color: var(--text-primary);
+            font-size: 1.8em;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 3px solid var(--primary);
+            font-weight: 700;
+        }
+        
+        h2:first-of-type {
+            margin-top: 20px;
+        }
+        
+        h3 {
+            color: var(--text-primary);
+            font-size: 1.3em;
+            margin: 25px 0 15px 0;
+            font-weight: 600;
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+        
+        ul, ol {
+            margin: 15px 0;
+            padding-left: 30px;
+        }
+        
+        li {
+            margin: 10px 0;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+        
+        .highlight-box {
+            background: #FEF3C7;
+            border: 2px solid #F59E0B;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+        }
+        
+        .highlight-box strong {
+            color: #92400E;
+            display: block;
+            margin-bottom: 8px;
+            font-size: 1.1em;
+        }
+        
+        .highlight-box p {
+            color: #78350F;
+            margin: 0;
+        }
+        
+        .footer {
+            background: var(--text-primary);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .footer p {
+            color: var(--text-tertiary);
+            margin: 5px 0;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 10px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .language-switcher {
+                position: static;
+                justify-content: center;
+                margin-bottom: 20px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 25px 20px;
+            }
+            
+            h2 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="language-switcher">
+                <button class="lang-btn" onclick="switchLanguage('en')" id="btn-en">EN</button>
+                <button class="lang-btn active" onclick="switchLanguage('tr')" id="btn-tr">TR</button>
+            </div>
+            <div class="app-icon">GC</div>
+            <h1>Gallery Cleaner</h1>
+            <p class="subtitle" id="header-subtitle">Hizmet Şartları</p>
+        </div>
+        
+        <div class="content">
+            <!-- ENGLISH CONTENT -->
+            <div class="lang-content" id="content-en">
+                <div class="last-updated">
+                    <strong>Effective Date:</strong> March 19, 2025<br>
+                    <strong>Developer:</strong> Herso App<br>
+                    <strong>App Version:</strong> 1.0.0
+                </div>
+                
+                <h2>1. Acceptance of Terms</h2>
+                <p>
+                    By downloading, installing, or using Gallery Cleaner ("the App"), you agree to be bound by these Terms of Service. 
+                    If you do not agree to these terms, please do not use the App.
+                </p>
+                
+                <h2>2. Description of Service</h2>
+                <p>
+                    Gallery Cleaner is a local photo management application that helps users find and remove duplicate photos from their Android devices. 
+                    All processing is performed locally on your device.
+                </p>
+                
+                <h2>3. User Responsibilities</h2>
+                <ul>
+                    <li>You are responsible for backing up important photos before deletion</li>
+                    <li>You must have the legal right to delete photos on your device</li>
+                    <li>You agree to use the App only for lawful purposes</li>
+                    <li>You acknowledge that deleted photos cannot be recovered by the App</li>
+                </ul>
+                
+                <h2>4. Disclaimer of Warranties</h2>
+                <div class="highlight-box">
+                    <strong>Important:</strong>
+                    <p>
+                        The App is provided "AS IS" without warranties of any kind. We do not guarantee that the App will be error-free 
+                        or that it will meet your specific requirements. Use at your own risk.
+                    </p>
+                </div>
+                
+                <h2>5. Limitation of Liability</h2>
+                <p>
+                    Herso App and its developers shall not be liable for any data loss, including accidental deletion of photos. 
+                    You are solely responsible for maintaining backups of your important data.
+                </p>
+                
+                <h2>6. Changes to Terms</h2>
+                <p>
+                    We reserve the right to modify these Terms of Service at any time. Continued use of the App after changes 
+                    constitutes acceptance of the modified terms.
+                </p>
+                
+                <h2>7. Termination</h2>
+                <p>
+                    You may stop using the App at any time by uninstalling it from your device. We reserve the right to 
+                    discontinue the App at any time without notice.
+                </p>
+                
+                <h2>8. Contact</h2>
+                <p>
+                    For questions about these Terms of Service, contact us at: <a href="mailto:support@hersoapp.com">support@hersoapp.com</a>
+                </p>
+            </div>
+            
+            
+            <!-- TURKISH CONTENT -->
+            <div class="lang-content active" id="content-tr">
+                <div class="last-updated">
+                    <strong>Yürürlük Tarihi:</strong> 19 Mart 2025<br>
+                    <strong>Geliştirici:</strong> Herso App<br>
+                    <strong>Uygulama Sürümü:</strong> 1.0.0
+                </div>
+                
+                <h2>1. Şartların Kabulü</h2>
+                <p>
+                    Gallery Cleaner'ı ("Uygulama") indirerek, kurarak veya kullanarak bu Hizmet Şartlarını kabul etmiş olursunuz. 
+                    Bu şartları kabul etmiyorsanız lütfen Uygulamayı kullanmayın.
+                </p>
+                
+                <h2>2. Hizmet Açıklaması</h2>
+                <p>
+                    Gallery Cleaner, kullanıcıların Android cihazlarından yinelenen fotoğrafları bulmasına ve kaldırmasına yardımcı olan 
+                    yerel bir fotoğraf yönetimi uygulamasıdır. Tüm işleme cihazınızda yerel olarak gerçekleştirilir.
+                </p>
+                
+                <h2>3. Kullanıcı Sorumlulukları</h2>
+                <ul>
+                    <li>Silme işleminden önce önemli fotoğraflarınızı yedeklemekten siz sorumlusunuz</li>
+                    <li>Cihazınızdaki fotoğrafları silme yasal hakkına sahip olmalısınız</li>
+                    <li>Uygulamayı yalnızca yasal amaçlar için kullanmayı kabul edersiniz</li>
+                    <li>Silinen fotoğrafların Uygulama tarafından kurtarılamayacağını kabul edersiniz</li>
+                </ul>
+                
+                <h2>4. Garanti Reddi</h2>
+                <div class="highlight-box">
+                    <strong>Önemli:</strong>
+                    <p>
+                        Uygulama "OLDUĞU GİBİ" hiçbir garanti olmaksızın sağlanmaktadır. Uygulamanın hatasız olacağını veya 
+                        özel gereksinimlerinizi karşılayacağını garanti etmiyoruz. Riski size aittir.
+                    </p>
+                </div>
+                
+                <h2>5. Sorumluluk Sınırlaması</h2>
+                <p>
+                    Herso App ve geliştiricileri, fotoğrafların kazara silinmesi dahil olmak üzere herhangi bir veri kaybından 
+                    sorumlu tutulamaz. Önemli verilerinizin yedeklerini tutmak yalnızca sizin sorumluluğunuzdadır.
+                </p>
+                
+                <h2>6. Şartlardaki Değişiklikler</h2>
+                <p>
+                    Bu Hizmet Şartlarını istediğimiz zaman değiştirme hakkını saklı tutarız. Değişikliklerden sonra Uygulamayı 
+                    kullanmaya devam etmeniz, değiştirilen şartları kabul ettiğiniz anlamına gelir.
+                </p>
+                
+                <h2>7. Sonlandırma</h2>
+                <p>
+                    Uygulamayı cihazınızdan kaldırarak istediğiniz zaman kullanmayı durdurabilirsiniz. Uygulamayı önceden haber 
+                    vermeksizin istediğimiz zaman durdurma hakkını saklı tutarız.
+                </p>
+                
+                <h2>8. İletişim</h2>
+                <p>
+                    Bu Hizmet Şartları hakkında sorularınız için bizimle iletişime geçin: <a href="mailto:support@hersoapp.com">support@hersoapp.com</a>
+                </p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>Gallery Cleaner v1.0.0</strong></p>
+            <p>&copy; 2025 Herso App. All rights reserved.</p>
+            <p style="margin-top: 15px;">
+                <a href="https://github.com/HakkiErdinc/GalleryCleaner" style="color: var(--text-tertiary); text-decoration: none;">
+                    Open Source Project
+                </a>
+            </p>
+        </div>
+    </div>
+    
+    <script>
+        function switchLanguage(lang) {
+            document.querySelectorAll('.lang-content').forEach(el => {
+                el.classList.remove('active');
+            });
+            
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            document.getElementById('content-' + lang).classList.add('active');
+            document.getElementById('btn-' + lang).classList.add('active');
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = lang;
+            
+            const subtitle = document.getElementById('header-subtitle');
+            if (lang === 'tr') {
+                subtitle.textContent = 'Hizmet Şartları';
+            } else {
+                subtitle.textContent = 'Terms of Service';
+            }
+            
+            localStorage.setItem('preferredLanguage', lang);
+        }
+        
+        window.addEventListener('DOMContentLoaded', function() {
+            const preferredLang = localStorage.getItem('preferredLanguage') || 'tr';
+            if (preferredLang !== 'tr') {
+                switchLanguage(preferredLang);
+            } else {
+                // Set initial lang attribute
+                document.documentElement.lang = 'tr';
+            }
+        });
+    </script>
+</body>
+</html>
