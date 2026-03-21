@@ -417,7 +417,7 @@
             <!-- ENGLISH CONTENT -->
             <div class="lang-content active" id="content-en">
             <div class="last-updated">
-                <strong>Last Updated:</strong> March 19, 2025<br>
+                <strong>Last Updated:</strong> March 19, 2026<br>
                 <strong>Developer:</strong> AppsXMobile<br>
                 <strong>App Version:</strong> 1.0.0
             </div>
@@ -440,7 +440,7 @@
             </p>
             <p>
                 <strong>Gallery Cleaner</strong> is a local photo management application designed to help you find and remove duplicate photos 
-                from your Android device. The app is developed by AppsXMobile and is available on the Google Play Store.
+                from your device. The app is developed by AppsXMobile and is available on the Google Play Store and Apple App Store.
             </p>
             
             <h2>Our Privacy Commitment</h2>
@@ -464,65 +464,28 @@
                 <li><strong>Advertising Data:</strong> No ad tracking or user profiling</li>
             </ul>
             
-            <h2>Permissions Explained</h2>
-            <p>
-                Gallery Cleaner requires certain permissions to function properly. Below is a detailed explanation of each permission, 
-                why we need it, and how we use it:
-            </p>
-            
+            <h2>Permissions We Request</h2>
+            <p>Gallery Cleaner only requests the minimum permissions needed to work. Here's what we ask for and why:</p>
+
             <div class="permission-card">
-                <h4>READ_MEDIA_IMAGES (Android 13+)</h4>
+                <h4>Photo Library Access</h4>
                 <p><span class="info-badge">Required</span></p>
-                <p><strong>Purpose:</strong> Access your photos and images</p>
-                <p><strong>Why We Need It:</strong> To scan your device for photos, detect duplicates, and display them in the app interface.</p>
-                <p><strong>How We Use It:</strong> The app reads photo files from your storage, analyzes them using AI algorithms to find similarities, and presents duplicate groups for your review.</p>
-                <p><strong>Scope:</strong> Photos only - no videos, documents, or other files are accessed.</p>
+                <p><strong>Why:</strong> To scan your photos, find duplicates, and display them for your review.</p>
+                <p><strong>Scope:</strong> Only your photos — we never access videos, documents, or any other files.</p>
             </div>
-            
+
             <div class="permission-card">
-                <h4>READ_MEDIA_VIDEO (Android 13+)</h4>
-                <p><span class="info-badge">Optional</span></p>
-                <p><strong>Purpose:</strong> Future feature support for video thumbnails</p>
-                <p><strong>Current Status:</strong> Requested but not actively used in version 1.0.0</p>
-            </div>
-            
-            <div class="permission-card">
-                <h4>READ_EXTERNAL_STORAGE (Android 12 and below)</h4>
-                <p><span class="info-badge">Required on older Android</span></p>
-                <p><strong>Purpose:</strong> Legacy permission for accessing photos on Android 10-12</p>
-                <p><strong>Note:</strong> Automatically replaced by READ_MEDIA_IMAGES on Android 13+</p>
-            </div>
-            
-            <div class="permission-card">
-                <h4>WRITE_EXTERNAL_STORAGE (Android 10 and below)</h4>
-                <p><span class="info-badge">Legacy</span></p>
-                <p><strong>Purpose:</strong> Delete photos on older Android versions</p>
-                <p><strong>Note:</strong> Only used on Android 10 and below. On newer versions, deletion is handled through MediaStore API.</p>
-            </div>
-            
-            <div class="permission-card">
-                <h4>MANAGE_EXTERNAL_STORAGE (Android 11+)</h4>
+                <h4>Photo Deletion</h4>
                 <p><span class="info-badge">Required</span></p>
-                <p><strong>Purpose:</strong> Full access to photos across all folders</p>
-                <p><strong>Why We Need It:</strong> To scan photos in all folders (Camera, Screenshots, WhatsApp, Downloads, etc.)</p>
-                <p><strong>How We Use It:</strong> This allows the app to find duplicates across your entire photo library, not just specific folders.</p>
-                <p><strong>Security:</strong> This is a sensitive permission, but necessary for the app's core functionality. We only access image files.</p>
+                <p><strong>Why:</strong> To remove the duplicate photos you select. Deletion always requires your explicit confirmation.</p>
             </div>
-            
-            <div class="permission-card">
-                <h4>ACCESS_MEDIA_LOCATION</h4>
-                <p><span class="info-badge">Optional</span></p>
-                <p><strong>Purpose:</strong> Read EXIF metadata from photos</p>
-                <p><strong>Why We Need It:</strong> To extract date/time information for better duplicate detection</p>
-                <p><strong>Privacy Note:</strong> We read metadata locally but don't store or transmit location data.</p>
-            </div>
-            
-            <div class="permission-card">
-                <h4>INTERNET & ACCESS_NETWORK_STATE</h4>
-                <p><span class="info-badge">Technical Requirement</span></p>
-                <p><strong>Purpose:</strong> Required by .NET MAUI framework</p>
-                <p><strong>Actual Usage:</strong> NOT actively used by the app. No network requests are made.</p>
-                <p><strong>Note:</strong> These are standard permissions included by the development framework but the app works 100% offline.</p>
+
+            <div class="highlight-box" style="background: #D1FAE5; border-color: #10B981;">
+                <strong style="color: #065F46;">What we DON'T request:</strong>
+                <p style="color: #065F46;">
+                    No internet access, no location access, no camera access, no contacts access, no microphone access.
+                    The app works 100% offline.
+                </p>
             </div>
             
             <h2>How Gallery Cleaner Works</h2>
@@ -567,16 +530,25 @@
                 <li>This includes cached thumbnails and scan results</li>
                 <li>All data is stored locally and deleted when you uninstall the app</li>
                 <li>No data is synced to cloud services</li>
+                <li>This web page stores your language preference in your browser's localStorage to remember your chosen language between visits</li>
             </ul>
             
             <p><strong>Security Measures:</strong></p>
             <ul>
-                <li>The app uses Android's built-in security features</li>
+                <li>The app uses your device's built-in security features</li>
                 <li>No passwords or authentication required (offline app)</li>
                 <li>Data is protected by your device's security (PIN, fingerprint, etc.)</li>
-                <li>Regular security updates through Google Play Store</li>
+                <li>Regular security updates through Google Play Store and Apple App Store</li>
             </ul>
             
+            <h2>In-App Feedback Form</h2>
+            <p>
+                The App includes an optional feedback form where you may provide your name and email address along with your message.
+                When you submit feedback, the information is sent directly via your device's default email client (mailto) to our support address.
+                We do not store, collect, or process this information within the app itself. The feedback is handled entirely through your email client,
+                and any data you provide is subject to your email provider's privacy policy.
+            </p>
+
             <h2>Third-Party Services</h2>
             <p>
                 Gallery Cleaner does NOT integrate with any third-party services, including:
@@ -600,8 +572,8 @@
             <p>Uninstalling the app removes all app data. To remove specific photos, use the app's delete feature.</p>
             
             <h3>Right to Revoke Permissions</h3>
-            <p>You can revoke app permissions at any time through Android Settings → Apps → Gallery Cleaner → Permissions. 
-            Note: Revoking storage permissions will prevent the app from functioning.</p>
+            <p>You can revoke app permissions at any time through your device's Settings (e.g., Settings &gt; Apps &gt; Gallery Cleaner &gt; Permissions on Android, or Settings &gt; Gallery Cleaner on iOS).
+            Note: Revoking storage or photo library permissions will prevent the app from functioning.</p>
             
             <h3>Right to Data Portability</h3>
             <p>Not applicable - the app doesn't collect or store personal data.</p>
@@ -609,7 +581,7 @@
             <h2>Children's Privacy</h2>
             <p>
                 Gallery Cleaner does not knowingly collect any information from children under 13 years of age. 
-                The app is rated for all ages on the Google Play Store. Since we don't collect any data, 
+                The app is rated for all ages on the Google Play Store and Apple App Store. Since we don't collect any data,
                 there are no special considerations for children's privacy beyond the general privacy protections described in this policy.
             </p>
             
@@ -622,6 +594,7 @@
                 <li><strong>GDPR</strong> (European Union)</li>
                 <li><strong>CCPA</strong> (California)</li>
                 <li><strong>LGPD</strong> (Brazil)</li>
+                <li><strong>KVKK</strong> (Turkish Personal Data Protection Law No. 6698)</li>
                 <li>Other international privacy regulations</li>
             </ul>
             
@@ -649,16 +622,22 @@
                 <li>Android App Privacy Requirements</li>
                 <li>General Data Protection Regulation (GDPR)</li>
                 <li>California Consumer Privacy Act (CCPA)</li>
+                <li>Turkish Personal Data Protection Law No. 6698 (KVKK)</li>
             </ul>
             
             <div class="highlight-box">
                 <strong>Important Legal Note:</strong>
                 <p>
-                    By using Gallery Cleaner, you acknowledge that you have read and understood this Privacy Policy. 
+                    By using Gallery Cleaner, you acknowledge that you have read and understood this Privacy Policy.
                     You also accept the app's Terms of Service (if applicable) and agree to the described data practices.
                 </p>
             </div>
-            
+
+            <h2>Data Breach Notification</h2>
+            <p>
+                Although we do not collect personal data, in the unlikely event of a security incident affecting our application, we will notify affected users through an app update and/or our website within 72 hours of becoming aware of the incident, in compliance with GDPR and KVKK requirements.
+            </p>
+
             <div class="contact-section">
                 <h3>Contact Us</h3>
                 <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your privacy, please contact us:</p>
@@ -679,7 +658,7 @@
                     We typically respond to inquiries within 48 hours. For urgent privacy concerns, please include "URGENT" in your email subject line.
                 </p>
             </div>
-            
+
             <h2>Your Consent</h2>
             <p>
                 By downloading, installing, and using Gallery Cleaner, you consent to the collection and use of information 
@@ -699,7 +678,7 @@
             <!-- TURKISH CONTENT -->
             <div class="lang-content" id="content-tr">
             <div class="last-updated">
-                <strong>Son Güncelleme:</strong> 19 Mart 2025<br>
+                <strong>Son Güncelleme:</strong> 19 Mart 2026<br>
                 <strong>Geliştirici:</strong> AppsXMobile<br>
                 <strong>Uygulama Sürümü:</strong> 1.0.0
             </div>
@@ -721,8 +700,8 @@
                 Şeffaflığa inanıyoruz ve uygulamamızı kullandığınızda fotoğraflarınız ve kişisel bilgilerinizle neler olduğunu tam olarak anlamanızı istiyoruz.
             </p>
             <p>
-                <strong>Gallery Cleaner</strong>, Android cihazınızdan yinelenen fotoğrafları bulmanıza ve kaldırmanıza yardımcı olmak için 
-                tasarlanmış yerel bir fotoğraf yönetimi uygulamasıdır. Uygulama AppsXMobile tarafından geliştirilmiştir ve Google Play Store'da mevcuttur.
+                <strong>Gallery Cleaner</strong>, cihazınızdaki yinelenen fotoğrafları bulmanıza ve kaldırmanıza yardımcı olmak için
+                tasarlanmış yerel bir fotoğraf yönetimi uygulamasıdır. Uygulama AppsXMobile tarafından geliştirilmiştir ve Google Play Store ile Apple App Store'da mevcuttur.
             </p>
             
             <h2>Gizlilik Taahhüdümüz</h2>
@@ -746,74 +725,28 @@
                 <li><strong>Reklam Verileri:</strong> Reklam izleme veya kullanıcı profili oluşturma yok</li>
             </ul>
             
-            <h2>İzinler Açıklaması</h2>
-            <p>
-                Gallery Cleaner'ın düzgün çalışması için belirli izinler gereklidir. Aşağıda her iznin, neden ihtiyaç duyulduğunun 
-                ve nasıl kullanıldığının ayrıntılı açıklaması bulunmaktadır:
-            </p>
-            
+            <h2>İstediğimiz İzinler</h2>
+            <p>Gallery Cleaner yalnızca çalışması için gereken minimum izinleri ister. İşte ne istediğimiz ve neden:</p>
+
             <div class="permission-card">
-                <h4>READ_MEDIA_IMAGES (Android 13+)</h4>
+                <h4>Fotoğraf Kütüphanesi Erişimi</h4>
                 <p><span class="info-badge">Gerekli</span></p>
-                <p><strong>Amaç:</strong> Fotoğraflarınıza ve görsellerinize erişim</p>
-                <p><strong>Neden Gerekli:</strong> Cihazınızdaki fotoğrafları taramak, yinelemeleri tespit etmek ve uygulama arayüzünde görüntülemek için.</p>
-                <p><strong>Nasıl Kullanılır:</strong> Uygulama, depolama alanınızdaki fotoğraf dosyalarını okur, benzerlikleri bulmak için yapay zeka algoritmalarıyla analiz eder ve incelemeniz için yineleme gruplarını sunar.</p>
-                <p><strong>Kapsam:</strong> Yalnızca fotoğraflar - videolar, belgeler veya diğer dosyalara erişilmez.</p>
+                <p><strong>Neden:</strong> Fotoğraflarınızı taramak, kopyaları bulmak ve incelemeniz için göstermek.</p>
+                <p><strong>Kapsam:</strong> Yalnızca fotoğraflarınız — videolara, belgelere veya diğer dosyalara asla erişmeyiz.</p>
             </div>
-            
+
             <div class="permission-card">
-                <h4>READ_MEDIA_IMAGES (Android 13+)</h4>
+                <h4>Fotoğraf Silme</h4>
                 <p><span class="info-badge">Gerekli</span></p>
-                <p><strong>Amaç:</strong> Fotoğraflarınıza ve görsellerinize erişim</p>
-                <p><strong>Neden Gerekli:</strong> Cihazınızdaki fotoğrafları taramak, yinelemeleri tespit etmek ve uygulama arayüzünde görüntülemek için.</p>
-                <p><strong>Nasıl Kullanılır:</strong> Uygulama, depolama alanınızdaki fotoğraf dosyalarını okur, benzerlikleri bulmak için yapay zeka algoritmalarıyla analiz eder ve incelemeniz için yineleme gruplarını sunar.</p>
-                <p><strong>Kapsam:</strong> Yalnızca fotoğraflar - videolar, belgeler veya diğer dosyalara erişilmez.</p>
+                <p><strong>Neden:</strong> Seçtiğiniz kopya fotoğrafları silmek için. Silme işlemi her zaman açık onayınızı gerektirir.</p>
             </div>
-            
-            <div class="permission-card">
-                <h4>READ_MEDIA_VIDEO (Android 13+)</h4>
-                <p><span class="info-badge">İsteğe Bağlı</span></p>
-                <p><strong>Amaç:</strong> Video küçük resimleri için gelecek özellik desteği</p>
-                <p><strong>Mevcut Durum:</strong> İstenmiş ancak sürüm 1.0.0'da aktif olarak kullanılmamaktadır</p>
-            </div>
-            
-            <div class="permission-card">
-                <h4>READ_EXTERNAL_STORAGE (Android 12 ve altı)</h4>
-                <p><span class="info-badge">Eski Android'de gerekli</span></p>
-                <p><strong>Amaç:</strong> Android 10-12'de fotoğraflara erişim için eski izin</p>
-                <p><strong>Not:</strong> Android 13+ sürümünde otomatik olarak READ_MEDIA_IMAGES ile değiştirilir</p>
-            </div>
-            
-            <div class="permission-card">
-                <h4>WRITE_EXTERNAL_STORAGE (Android 10 ve altı)</h4>
-                <p><span class="info-badge">Eski</span></p>
-                <p><strong>Amaç:</strong> Eski Android sürümlerinde fotoğrafları silme</p>
-                <p><strong>Not:</strong> Yalnızca Android 10 ve altında kullanılır. Yeni sürümlerde silme işlemi MediaStore API'si aracılığıyla yapılır.</p>
-            </div>
-            
-            <div class="permission-card">
-                <h4>MANAGE_EXTERNAL_STORAGE (Android 11+)</h4>
-                <p><span class="info-badge">Gerekli</span></p>
-                <p><strong>Amaç:</strong> Tüm klasörlerdeki fotoğraflara tam erişim</p>
-                <p><strong>Neden Gerekli:</strong> Tüm klasörlerdeki fotoğrafları taramak için (Kamera, Ekran Görüntüleri, WhatsApp, İndirilenler vb.)</p>
-                <p><strong>Nasıl Kullanılır:</strong> Bu, uygulamanın yalnızca belirli klasörler yerine tüm fotoğraf kitaplığınızdaki yinelemeleri bulmasını sağlar.</p>
-                <p><strong>Güvenlik:</strong> Bu hassas bir izindir ancak uygulamanın temel işlevselliği için gereklidir. Yalnızca görüntü dosyalarına erişiriz.</p>
-            </div>
-            
-            <div class="permission-card">
-                <h4>ACCESS_MEDIA_LOCATION</h4>
-                <p><span class="info-badge">İsteğe Bağlı</span></p>
-                <p><strong>Amaç:</strong> Fotoğraflardan EXIF meta verilerini okuma</p>
-                <p><strong>Neden Gerekli:</strong> Daha iyi yineleme tespiti için tarih/saat bilgilerini çıkarmak için</p>
-                <p><strong>Gizlilik Notu:</strong> Meta verileri yerel olarak okuruz ancak konum verilerini saklamaz veya aktarmayız.</p>
-            </div>
-            
-            <div class="permission-card">
-                <h4>INTERNET & ACCESS_NETWORK_STATE</h4>
-                <p><span class="info-badge">Teknik Gereklilik</span></p>
-                <p><strong>Amaç:</strong> .NET MAUI çerçevesi tarafından gereklidir</p>
-                <p><strong>Gerçek Kullanım:</strong> Uygulama tarafından aktif olarak kullanılmaz. Hiçbir ağ isteği yapılmaz.</p>
-                <p><strong>Not:</strong> Bunlar geliştirme çerçevesi tarafından dahil edilen standart izinlerdir ancak uygulama %100 çevrimdışı çalışır.</p>
+
+            <div class="highlight-box" style="background: #D1FAE5; border-color: #10B981;">
+                <strong style="color: #065F46;">İstemediğimiz izinler:</strong>
+                <p style="color: #065F46;">
+                    İnternet erişimi yok, konum erişimi yok, kamera erişimi yok, rehber erişimi yok, mikrofon erişimi yok.
+                    Uygulama %100 çevrimdışı çalışır.
+                </p>
             </div>
             
             <h2>Gallery Cleaner Nasıl Çalışır</h2>
@@ -858,16 +791,25 @@
                 <li>Bu, önbelleğe alınmış küçük resimleri ve tarama sonuçlarını içerir</li>
                 <li>Tüm veriler yerel olarak saklanır ve uygulamayı kaldırdığınızda silinir</li>
                 <li>Veriler bulut hizmetlerine senkronize edilmez</li>
+                <li>Bu web sayfası, ziyaretleriniz arasında seçtiğiniz dili hatırlamak için tarayıcınızın localStorage alanında dil tercihinizi saklar</li>
             </ul>
             
             <p><strong>Güvenlik Önlemleri:</strong></p>
             <ul>
-                <li>Uygulama Android'in yerleşik güvenlik özelliklerini kullanır</li>
+                <li>Uygulama cihazınızın yerleşik güvenlik özelliklerini kullanır</li>
                 <li>Şifre veya kimlik doğrulama gerekli değil (çevrimdışı uygulama)</li>
                 <li>Veriler cihazınızın güvenliği (PIN, parmak izi vb.) ile korunur</li>
-                <li>Google Play Store aracılığıyla düzenli güvenlik güncellemeleri</li>
+                <li>Google Play Store ve Apple App Store aracılığıyla düzenli güvenlik güncellemeleri</li>
             </ul>
             
+            <h2>Uygulama İçi Geri Bildirim Formu</h2>
+            <p>
+                Uygulama, mesajınızla birlikte adınızı ve e-posta adresinizi isteğe bağlı olarak sağlayabileceğiniz bir geri bildirim formu içerir.
+                Geri bildirim gönderdiğinizde, bilgiler cihazınızın varsayılan e-posta istemcisi (mailto) aracılığıyla doğrudan destek adresimize gönderilir.
+                Bu bilgileri uygulama içinde saklamaz, toplamaz veya işlemeyiz. Geri bildirim tamamen e-posta istemciniz aracılığıyla yönetilir
+                ve sağladığınız veriler e-posta sağlayıcınızın gizlilik politikasına tabidir.
+            </p>
+
             <h2>Üçüncü Taraf Hizmetleri</h2>
             <p>Gallery Cleaner, aşağıdakiler dahil olmak üzere hiçbir üçüncü taraf hizmetiyle entegre değildir:</p>
             <ul>
@@ -889,8 +831,8 @@
             <p>Uygulamayı kaldırmak tüm uygulama verilerini kaldırır. Belirli fotoğrafları kaldırmak için uygulamanın silme özelliğini kullanın.</p>
             
             <h3>İzinleri Geri Alma Hakkı</h3>
-            <p>Uygulama izinlerini istediğiniz zaman Android Ayarlar → Uygulamalar → Gallery Cleaner → İzinler aracılığıyla geri alabilirsiniz. 
-            Not: Depolama izinlerini geri almak uygulamanın çalışmasını engelleyecektir.</p>
+            <p>Uygulama izinlerini istediğiniz zaman cihazınızın Ayarlar menüsünden geri alabilirsiniz (Android'de Ayarlar &gt; Uygulamalar &gt; Gallery Cleaner &gt; İzinler, iOS'ta Ayarlar &gt; Gallery Cleaner).
+            Not: Depolama veya fotoğraf kütüphanesi izinlerini geri almak uygulamanın çalışmasını engelleyecektir.</p>
             
             <h3>Veri Taşınabilirliği Hakkı</h3>
             <p>Uygulanmaz - uygulama kişisel veri toplamaz veya saklamaz.</p>
@@ -898,7 +840,7 @@
             <h2>Çocukların Gizliliği</h2>
             <p>
                 Gallery Cleaner, 13 yaşın altındaki çocuklardan bilinçli olarak herhangi bir bilgi toplamaz. 
-                Uygulama Google Play Store'da tüm yaşlar için derecelendirilmiştir. Herhangi bir veri toplamadığımız için, 
+                Uygulama Google Play Store ve Apple App Store'da tüm yaşlar için derecelendirilmiştir. Herhangi bir veri toplamadığımız için,
                 bu politikada açıklanan genel gizlilik korumalarının ötesinde çocukların gizliliği için özel hususlar yoktur.
             </p>
             
@@ -911,6 +853,7 @@
                 <li><strong>GDPR</strong> (Avrupa Birliği)</li>
                 <li><strong>CCPA</strong> (Kaliforniya)</li>
                 <li><strong>LGPD</strong> (Brezilya)</li>
+                <li><strong>KVKK</strong> (6698 Sayılı Kişisel Verilerin Korunması Kanunu)</li>
                 <li>Diğer uluslararası gizlilik düzenlemeleri</li>
             </ul>
             
@@ -938,16 +881,22 @@
                 <li>Android Uygulama Gizlilik Gereksinimleri</li>
                 <li>Genel Veri Koruma Yönetmeliği (GDPR)</li>
                 <li>Kaliforniya Tüketici Gizlilik Yasası (CCPA)</li>
+                <li>6698 Sayılı Kişisel Verilerin Korunması Kanunu (KVKK)</li>
             </ul>
             
             <div class="highlight-box">
                 <strong>Önemli Yasal Not:</strong>
                 <p>
-                    Gallery Cleaner'ı kullanarak, bu Gizlilik Politikasını okuduğunuzu ve anladığınızı kabul edersiniz. 
+                    Gallery Cleaner'ı kullanarak, bu Gizlilik Politikasını okuduğunuzu ve anladığınızı kabul edersiniz.
                     Ayrıca uygulamanın Hizmet Şartlarını (varsa) kabul eder ve açıklanan veri uygulamalarını kabul edersiniz.
                 </p>
             </div>
-            
+
+            <h2>Veri İhlali Bildirimi</h2>
+            <p>
+                Kişisel veri toplamamıza rağmen, uygulamamızı etkileyen olası bir güvenlik olayı durumunda, GDPR ve KVKK gereksinimlerine uygun olarak, olaydan haberdar olduktan sonraki 72 saat içinde etkilenen kullanıcıları bir uygulama güncellemesi ve/veya web sitemiz aracılığıyla bilgilendireceğiz.
+            </p>
+
             <div class="contact-section">
                 <h3>Bize Ulaşın</h3>
                 <p>Gizlilik politikamız hakkında sorularınız varsa lütfen bizimle iletişime geçin:</p>
@@ -964,7 +913,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <h2>Onayınız</h2>
             <p>
                 Gallery Cleaner'ı indirerek, kurarak ve kullanarak, bu Gizlilik Politikasını kabul etmiş olursunuz.
@@ -982,7 +931,7 @@
         
         <div class="footer">
             <p><strong>Gallery Cleaner v1.0.0</strong></p>
-            <p>© 2025 AppsXMobile. All rights reserved.</p>
+            <p>© 2026 AppsXMobile. All rights reserved.</p>
         </div>
     </div>
     
